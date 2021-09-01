@@ -1,0 +1,9 @@
+<agm-map [latitude]="currentPosition.lat" [longitude]="currentPosition.lon" [zoom]="zoom" [disableDefaultUI]="false"
+    [zoomControl]="false">
+    <agm-marker *ngFor="let point of points" [latitude]="point.lat" [longitude]="point.lon"></agm-marker>
+    <agm-polyline strokeColor="red">
+        <agm-polyline-point *ngFor="let point of points" [latitude]="point.lat" [longitude]="point.lon">
+        </agm-polyline-point>
+    </agm-polyline>
+
+</agm-map>
